@@ -1,3 +1,5 @@
+import products1 from './public/courseDetails.json' assert { type: 'json' };
+
 const express = require('express');
 const cors = require('cors');
 const serverless = require("serverless-http");
@@ -6,7 +8,7 @@ const router = express.Router();
 
 const port = process.env.port || 3000;
 
-const products = require('/courseDetails.json');
+const products = require(products1);
 
 
 app.use(cors());
@@ -20,7 +22,7 @@ app.get('/products', (req, res) => {
 });
 
 app.get('/products/:id', (req, res) => {
-  console.log("11:"+req.params.id);
+  const id = req.params.id;
   const productIdByProducts = products.filter((n) => n._id === id);
 
   if (productIdByProducts.length > 0) {
