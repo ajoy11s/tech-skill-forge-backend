@@ -1,4 +1,3 @@
-import products1 from './public/courseDetails.json' assert { type: 'json' };
 
 const express = require('express');
 const cors = require('cors');
@@ -8,7 +7,7 @@ const router = express.Router();
 
 const port = process.env.port || 3000;
 
-const products = require(products1);
+const products = require('./app/courseDetails.json');
 
 
 app.use(cors());
