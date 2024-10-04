@@ -36,5 +36,5 @@ app.get('/products/:id', (req, res) => {
 // app.listen(port, () => {
 //   console.log(`Hello world ${port}`);
 // });
-app.use("/.netlify/functions/app", router);
+app.use("./netlify/functions/app", router);
 module.exports.handler = serverless(app);
