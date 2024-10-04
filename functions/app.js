@@ -7,7 +7,7 @@ const router = express.Router();
 
 const port = process.env.port || 3000;
 
-const products = require('./app/courseDetails.json');
+const products = require('/courseDetails.json');
 
 
 app.use(cors());
