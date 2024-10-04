@@ -1,3 +1,4 @@
+import coursedata from "../public/courseDetails.json";
 
 const express = require('express');
 const cors = require('cors');
@@ -7,7 +8,7 @@ const router = express.Router();
 
 const port = process.env.port || 3000;
 
-const products = require('/courseDetails.json');
+const products = require(coursedata);
 
 
 app.use(cors());
