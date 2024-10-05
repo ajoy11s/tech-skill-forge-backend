@@ -2,7 +2,7 @@
   "name": "tech-skill-forge-backend",
   "main": "index.js",
   "scripts": {
-    "start": "app.js",
+    "start": "api.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "netlify deploy --prod"
   },
