@@ -1,3 +1,5 @@
+import jsondata from "../public/courseDetails.json"
+
 const express = require('express');
 const cors = require('cors');
 const serverless = require("serverless-http");
@@ -6,7 +8,7 @@ const router = express.Router();
 
 const port = process.env.PORT || 3000;
 
-const products = require("./public/courseDetails.json");
+const products = require(jsondata);
 
 // Middleware
 app.use(cors());
